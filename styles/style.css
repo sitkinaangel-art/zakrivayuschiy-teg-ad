@@ -6,7 +6,7 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 @supports (font-variation-settings: normal) {
@@ -122,14 +122,13 @@
 
 .filter-mix img {
   filter: invert(0.7) contrast(1) brightness(100%);
-} 
+}
 
 .filter-contrast img {
   filter: contrast(20%);
 }
 
 .filter-invert img {
-  
   filter: invert(0.7);
 }
 
@@ -153,9 +152,9 @@
   inset-inline-end: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
   inset-block-start: clamp(1.5rem, 1.4778rem + 0.0946vw, 1.563rem);
   text-shadow:
-  -1px 0 var(--background-color), 
-  0 1px var(--background-color), 
-  1px 0 var(--background-color), 
+  -1px 0 var(--background-color),
+  0 1px var(--background-color),
+  1px 0 var(--background-color),
   0 -1px var(--background-color);
   mix-blend-mode: hard-light;
   z-index: 1;
@@ -174,7 +173,7 @@
 }
 
 .card_text {
-  padding: var(--padding-text); 
+  padding: var(--padding-text);
   line-height: var(--line-height-text);
   border-block-start: var(--outline-main);
 }
@@ -244,14 +243,17 @@ svg.like-icon {
 
 .button {
   transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color);
 }
 
-.button:focus { 
-  outline: none; 
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color); 
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .card__icon-button:focus {
@@ -260,12 +262,6 @@ svg.like-icon {
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-}
-
-.button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-color);
 }
 
 .button::before {
@@ -395,7 +391,7 @@ dialog:not([open]) {
 dialog::backdrop {
   -webkit-backdrop-filter: brightness(25%);
   backdrop-filter: brightness(25%);
-} 
+}
 
 .text-dialog {
   text-wrap: wrap;
@@ -420,7 +416,7 @@ dialog::backdrop {
     flex-direction: row;
   }
 
-  svg.floppy  {
+  svg.floppy {
     width: 21px;
   }
 
